@@ -4,11 +4,12 @@ const Form = (event) => {
   const [date, setDate] = useState("");
   const [number, setNumber] = useState("");
   const [result, setResult] = useState("");
+
   const processAndDisplayResult = (event) => {
     event.preventDefault();
     var sum = 0;
     var output = "";
-    if (date == "" || number == "") {
+    if (date == "" || number == "" || parseInt(number) < 0) {
       output += "Please enter valid input";
     } else {
       for (let i = 0; i < date.length; i++) {
